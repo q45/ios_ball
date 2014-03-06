@@ -20,8 +20,8 @@
     [super viewDidLoad];
     
     self.crystalBall = [[QSCrystalBall alloc] init];
-    NSString *value = [NSString stringWithFormat:@"You have %d predictions ", [self.crystalBall.predictions count]];
-    self.predictionCount.text = value;
+    //NSString *value = [NSString stringWithFormat:@"You have %d predictions ", [self.crystalBall.predictions count]];
+    //self.predictionCount.text = value;
     
     self.backgroundImageView.animationImages = [[NSArray alloc]initWithObjects:
                                                 [UIImage imageNamed:@"CB00001"],
@@ -86,7 +86,7 @@
                                                 [UIImage imageNamed:@"CB00060"],
                                                 nil];
     
-    self.backgroundImageView.animationDuration = 2.0f;
+    self.backgroundImageView.animationDuration = 2.5f;
     self.backgroundImageView.animationRepeatCount = 1;
         
    
@@ -111,12 +111,17 @@
     
     [self.backgroundImageView startAnimating];
     self.labelText.text = [self.crystalBall randomPrediction];
+    
+    [UIView animateWithDuration:6.0f animations:^{
+        self.labelText.alpha = 1.0;
+    }];
 }
 
 #pragma -mark Motion Events
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     self.labelText.text = nil;
+    self.labelText.alpha = 0.0f;
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event    {
@@ -132,6 +137,7 @@
 #pragma mark - Touch Events
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     self.labelText.text = nil;
+    self.labelText.alpha = 0.0f;
     
 }
 

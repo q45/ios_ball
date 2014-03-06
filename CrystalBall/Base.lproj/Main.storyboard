@@ -20,8 +20,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="I82-MW-j9j">
-                                <rect key="frame" x="38" y="175" width="244" height="120"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to the Party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="I82-MW-j9j">
+                                <rect key="frame" x="43" y="205" width="244" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="244" id="OjV-Et-P5S"/>
@@ -34,10 +34,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I82-MW-j9j" firstAttribute="centerX" secondItem="35u-RR-Rom" secondAttribute="centerX" id="3Ek-jq-KNA"/>
                             <constraint firstItem="35u-RR-Rom" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6oZ-eK-DHz"/>
                             <constraint firstAttribute="trailing" secondItem="35u-RR-Rom" secondAttribute="trailing" id="G2M-QJ-GaI"/>
-                            <constraint firstItem="I82-MW-j9j" firstAttribute="centerY" secondItem="35u-RR-Rom" secondAttribute="centerY" constant="-49" id="Z8a-2p-mAe"/>
                             <constraint firstItem="pld-M1-BZM" firstAttribute="top" secondItem="35u-RR-Rom" secondAttribute="bottom" id="ZXk-Il-6mH"/>
                             <constraint firstItem="35u-RR-Rom" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dGk-Zg-T9T"/>
                         </constraints>
