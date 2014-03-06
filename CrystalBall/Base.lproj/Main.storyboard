@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="35u-RR-Rom">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="35u-RR-Rom">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -43,6 +43,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="35u-RR-Rom" id="Lsf-sj-nJX"/>
                         <outlet property="labelText" destination="I82-MW-j9j" id="wMj-t9-fNi"/>
                     </connections>
                 </viewController>
@@ -51,7 +52,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="320" height="568"/>
+        <image name="CB00001" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

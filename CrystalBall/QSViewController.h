@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *predictionCount;
 @property (weak, nonatomic) IBOutlet UILabel *labelText;
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 -(void) makePrediction;
 
 
