@@ -8,16 +8,26 @@
 
 #import "QSViewController.h"
 #import "QSCrystalBall.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface QSViewController ()
 
 @end
 
-@implementation QSViewController
+@implementation QSViewController {
+    SystemSoundID *soundEffect;
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
+    NSURL *soundURL = [NSURL fileURLWithPath:path];
+    
+    AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL), &soundEffect);
+    
     
     self.crystalBall = [[QSCrystalBall alloc] init];
     //NSString *value = [NSString stringWithFormat:@"You have %d predictions ", [self.crystalBall.predictions count]];
@@ -111,6 +121,7 @@
     
     [self.backgroundImageView startAnimating];
     self.labelText.text = [self.crystalBall randomPrediction];
+    AudioServicesPlaySystemSound(soundEffect);
     
     [UIView animateWithDuration:6.0f animations:^{
         self.labelText.alpha = 1.0;
